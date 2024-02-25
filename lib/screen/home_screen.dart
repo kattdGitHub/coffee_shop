@@ -7,14 +7,13 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+   @override
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   List<String> tabList = [
     "All",
     "Cappuccino",
@@ -59,8 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Container(
                             height: 40,
-                            width: 40, decoration: BoxDecoration(color: Color(
-                            0xff21262E), borderRadius:BorderRadius.circular(8)),
+                            width: 40,
+                            decoration: BoxDecoration(
+                                color: Color(0xff21262E),
+                                borderRadius: BorderRadius.circular(8)),
                             child: Image.asset(Assets.iconsElements)),
                         Container(
                           height: 40,
@@ -97,12 +98,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(18),
                           borderSide:
-                          BorderSide(color: Colors.grey, width: 0.0),
+                              BorderSide(color: Colors.grey, width: 0.0),
                         ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(18),
                           borderSide:
-                          BorderSide(color: Colors.grey, width: 0.0),
+                              BorderSide(color: Colors.grey, width: 0.0),
                         ),
                         prefixIcon: Padding(
                           padding: const EdgeInsets.all(12.0),
