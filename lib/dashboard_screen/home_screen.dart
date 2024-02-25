@@ -7,9 +7,12 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'BeanDetailsScreen.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-   @override
+
+  @override
   State<HomePage> createState() => _HomePageState();
 }
 
@@ -218,15 +221,21 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.bold,
                         fontSize: 17),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(7),
-                        color: Color(0xffD17842)),
-                    padding: EdgeInsets.all(6),
-                    child: Icon(
-                      CupertinoIcons.add,
-                      color: Colors.white,
-                      size: 17,
+                  InkWell(
+                    onTap: () => pushTo(
+                      context,
+                      BeanDetailsScreen(),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7),
+                          color: Color(0xffD17842)),
+                      padding: EdgeInsets.all(6),
+                      child: Icon(
+                        CupertinoIcons.add,
+                        color: Colors.white,
+                        size: 17,
+                      ),
                     ),
                   ),
                 ],

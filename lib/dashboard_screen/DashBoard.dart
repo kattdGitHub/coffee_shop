@@ -1,6 +1,7 @@
-import 'package:coffe_shop/screen/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'home_screen.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -14,7 +15,7 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.black,
       body: IndexedStack(
         index: currentIndex,
         children: [
@@ -24,19 +25,18 @@ class _DashboardState extends State<Dashboard> {
           SizedBox(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar( backgroundColor: Colors.black,
         currentIndex: currentIndex,
         onTap: (value) => setState(() {
           currentIndex = value;
-        }),
+        },),
+        selectedItemColor: Colors.deepOrange, // Change this to the color you want for selected item
+        unselectedItemColor:Color(0xff4E5053),
+         // Change this to the color you want for unselected items
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_filled),
             label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
-            label: 'Item 2',
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -45,12 +45,12 @@ class _DashboardState extends State<Dashboard> {
             label: 'Item 3',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.heart_broken),
+            icon: Icon(CupertinoIcons.heart),
             label: 'Item 4',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_alert_sharp),
-            label: 'Item 4',
+            icon: Icon(CupertinoIcons.bell),
+            label: 'Item 5',
           ),
         ],
       ),

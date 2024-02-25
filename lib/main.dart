@@ -1,6 +1,5 @@
-import 'package:coffe_shop/screen/DashBoard.dart';
-import 'package:coffe_shop/screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'dashboard_screen/DashBoard.dart';
 
 void main() {
   runApp(const MyApp());
