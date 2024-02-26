@@ -25,7 +25,8 @@ class _DashboardState extends State<Dashboard> {
           SizedBox(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar( backgroundColor: Colors.black,
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
         currentIndex: currentIndex,
         onTap: (value) => setState(() {
           currentIndex = value;
