@@ -121,7 +121,7 @@ class BeanDetailsScreen extends StatelessWidget {
                                   height: 50.h,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(
-                                      Radius.circular(10.r),
+                                       Radius.circular(10.r),
                                     ),
                                     color: Color(0xff141921),
                                   ),
