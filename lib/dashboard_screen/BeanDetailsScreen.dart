@@ -127,7 +127,7 @@ class BeanDetailsScreen extends StatelessWidget {
                                   ),
                                   child: Text(
                                     "Medium Roasted",
-                                    style: TextStyle(color: Colors.grey),
+                                      style: TextStyle(color: Colors.grey),
                                   ),
                                 )
                               ],
